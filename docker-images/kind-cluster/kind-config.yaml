@@ -7,11 +7,6 @@ networking:
   serviceSubnet: "10.246.0.0/16"
 kubeadmConfigPatches:
 - |
-  apiVersion: kubelet.config.k8s.io/v1beta1
-  kind: KubeletConfiguration
-  evictionHard:
-    nodefs.available: "0%"
-- |
   apiVersion: kubeadm.k8s.io/v1beta2
   kind: JoinConfiguration
   metadata:
