@@ -17,8 +17,8 @@ limitations under the License.
 package types
 
 const (
-	NodeImageRepository = "trendyoltech/kind-node"
+	NodeImageRepository = "stg-orca-harbor.cloud.hancom.com/cluster-test/kind-node"
 	ImageRepository     = "stg-orca-harbor.cloud.hancom.com/cluster-test/kind-cluster"
-	NodeImageTag        = "1.21.3"
+	NodeImageTag        = "0.0.1"
 	ImageTag            = "v0.0.7"   // 30002
 )
