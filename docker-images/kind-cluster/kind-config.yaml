@@ -5,6 +5,7 @@ networking:
   apiServerAddress:
   podSubnet: "10.245.0.0/16"
   serviceSubnet: "10.246.0.0/16"
+  disableDefaultCNI: true
 kubeadmConfigPatches:
 - |
   apiVersion: kubeadm.k8s.io/v1beta2
