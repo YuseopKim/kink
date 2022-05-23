@@ -11,8 +11,8 @@ CGROUP_SUBSYSTEMS=$(findmnt -lun -o source,target -t cgroup | grep "${CURRENT_CG
 
 mount --make-rprivate /sys/fs/cgroup
 
-echo "${CGROUP_SUBSYSTEMS}" |
-while IFS= read -r SUBSYSTEM; do
+#echo "${CGROUP_SUBSYSTEMS}" |
+#while IFS= read -r SUBSYSTEM; do
   # This is because we set Kubelet's cgroup-root to `/kubelet` by
   # default. We have to do that because otherwise, it'll collide
   # with the cgroups used by the Kubelet running on the host if we
@@ -28,7 +28,7 @@ while IFS= read -r SUBSYSTEM; do
   # We need to perform a self bind mount here because otherwise,
   # systemd might delete the cgroup unintentionally before the
   # kubelet starts.
-  mount --bind "${SUBSYSTEM}/kubelet" "${SUBSYSTEM}/kubelet"
-done
+  #mount --bind "${SUBSYSTEM}/kubelet" "${SUBSYSTEM}/kubelet"
+#done
 
 exec "$@"
