@@ -19,6 +19,6 @@ package types
 const (
 	NodeImageRepository = "stg-orca-harbor.cloud.hancom.com/cluster-test/kind-node"
 	ImageRepository     = "stg-orca-harbor.cloud.hancom.com/cluster-test/kind-cluster"
-	NodeImageTag        = "0.0.2"
-	ImageTag            = "v0.0.6"   // 30002
+	NodeImageTag        = "0.0.3"
+	ImageTag            = "v0.0.7"   // 30002
 )
